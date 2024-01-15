@@ -1,0 +1,50 @@
+:root{  
+    --primaryColor: #00bfff;  
+    --secondaryColor: #77c4dd;  
+    --lightColor: #187ca3;  
+    --bgColor-1: #87cefa;  
+    --bgColor-2: #4169e1;  
+    --padding: 8%  
+}  
+*{   
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+} 
+body{
+    background: url(../img/4.jpeg);  
+}
+p{
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+}
+h2{
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--lightColor);
+    }
+    h3{
+        font-weight: 700;
+        font-size: 15px;
+    }
+    h1{
+        font-size: 25px;
+        text-align: center;
+    }
+    .custom-button { background-color: var(--lightColor);
+        border: none;
+         color: white;
+          padding: 6px 10px;
+           text-align: center;
+            text-decoration: none; 
+            display: flex;
+             font-size: 16px;
+              margin: 0px 0px;
+               cursor: pointer;
+                transition-duration: 0.4s; 
+                margin-left: 37%;
+                margin-bottom: 5%;
+               } 
+               .custom-button:hover { background-color: var(--lightColor); } 
+   

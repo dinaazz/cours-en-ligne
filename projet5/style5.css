@@ -1,0 +1,130 @@
+:root{  
+    --primaryColor: #00bfff;  
+    --secondaryColor: #77c4dd;  
+    --lightColor: #187ca3;  
+    --bgColor-1: #87cefa;  
+    --bgColor-2: #4169e1; 
+} 
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+    }
+    .container{
+        min-height: 100vh;
+        width: 100%;
+        background-image: url(../img/4.jpeg);
+    }
+    .service-wrapper{
+        padding: 5% 8%;
+       }
+       .service{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+       }
+       h1{
+        color: var(--lightColor);
+        font-size: 5rem;
+        -webkit-text-stroke-color: transparent;
+        letter-spacing: 4px;
+        background-color: rgb(4, 52, 83);
+        background: linear-gradient(8deg,rgba(4,52,83,1)0%,rgba(0,191,255,1),rgba(41, 17, 45, 1)100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: relative;
+    }
+    h1:after{
+     content: ""; 
+     position: absolute;
+       top: 100%;
+       left: 10%;
+       height: 8px;
+       width: 80%;
+       border-radius: 50%;
+       background-color: bisque;
+    }
+    h1 span{
+        position: absolute;
+        top: 100%;
+        left: 8%;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        background-color: var(--lightColor);
+        animation: anim 5s linear infinite;
+    }
+    @keyframes anim {
+        95%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+            left: 80%;
+    
+        }
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 30px;
+        margin-top: 80px;
+    }
+    .card{
+        height: 280px;
+        width: 270px;
+        background-color: rgb(188, 229, 246);
+        padding: 3% 8%;
+        border: 0.2px solid rgba(0,191,255,1);
+    border-radius: 8px;
+    transition: .6s;
+    display: flex;
+    align-items: center;
+    flex-direction:column ;
+    position: relative;
+    overflow: hidden;
+    }
+    .card:after{
+        content: "";
+        position: absolute;
+        top: 150%;
+        left: -200px;
+        width: 120%;
+        transform: rotate(50deg);
+        background-color: #fff;
+        height: 18px;
+        filter: blur(30px);
+        opacity: 0.5;
+        transition: 1s;
+    }
+    .card:hover:after{
+    width: 225%;
+    top: -100%;
+    }
+    .card i{
+        color: var(--primaryColor);
+        margin-top: 10px;
+        margin-bottom: 15px;
+        font-size: 3.2rem;
+    }
+    .card h2{
+        color: black;
+        font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    }
+    .card p{
+        text-align: center;
+        width: 100%;
+        margin: 12px 0;
+        color: rgb(32, 94, 136);
+    }
+    .card:hover{
+        background-color: transparent;
+        transform: translateY(-8px);
+        border-color: var(--secondaryColor);
+    }
+    .card:hover i{
+        color: var(--lightColor);
+    }
